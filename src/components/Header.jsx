@@ -2,8 +2,7 @@ export default function Header({ cartCount }) {
   return (
     <header className="header">
         <div className="logo">
-            {/* FALTAAAAA LA IMAGEEEEN img/ */}
-            <img src="/img/logo1.png" className="img-fluid" alt="HuertoHogar" />
+            <img src="/Logo IMG.png" className="img-fluid" alt="HuertoHogar" />
         </div>
         <nav className="nav">
             <a href="#inicio">Inicio</a>
