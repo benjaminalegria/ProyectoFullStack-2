@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
-import Header from './components/Header';
+import Header from './pages/header/Header';
 import ProductList from './components/ProductList';
-// Importa los componentes que creaste en el paso anterior y el de esta vez
-import Nosotros from './components/Nosotros';
-import Blog from './components/Blog';
-import Contacto from './components/Contacto';
-import CartModal from './components/CartModal';
+import Nosotros from './pages/nosotros/nosotros';
+import Blog from './pages/blog/Blog';
+import Contacto from './pages/contacto/Contacto';
+
 import LoginModal from './components/LoginModal';
+import CartModal from './components/CartModal';
+// Importa los componentes que creaste en el paso anterior y el de esta vez
+
+
 
 function App() {
   const [productos, setProductos] = useState([]);
@@ -91,11 +94,12 @@ function App() {
       </main>
 
       {/* RENDERIZAR LOS MODALES AL FINAL */}
-      <CartModal 
+      < CartModal
         carrito={carrito} 
         cambiarCantidad={cambiarCantidad} 
         eliminarDelCarrito={eliminarDelCarrito} 
       />
+      
       <LoginModal />
 
       <footer className="bg-dark text-white text-center py-3 mt-5">
