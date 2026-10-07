@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Inicio from "./pages/inicio/inicio";
 import Nosotros from "./pages/nosotros/nosotros";
-import Blog from "./pages/blog/blog";
+
 import Productos from "./pages/productos/productos";
-import Contacto from "./pages/contacto/contacto";
+import Blog from "./pages/blog/Blog";
+import Contacto from "./pages/contacto/Contacto";
 
 
 export const routes = createBrowserRouter([
