@@ -7,7 +7,7 @@ import Nosotros from "./pages/nosotros/nosotros";
 import App_alert from "./components/Alert";
 import Header from "./pages/header/Header";
 
-// Limpia el DOM falso después de cada prueba
+
 afterEach(() => {
     cleanup();
 });
