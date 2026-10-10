@@ -3,13 +3,12 @@ import Header from './pages/header/Header';
 import ProductList from './components/ProductList';
 import Nosotros from './pages/nosotros/nosotros';
 import Blog from './pages/blog/Blog';
-import Contacto from './pages/contacto/Contacto';
+import Contacto from './pages/contacto/contacto';
 
+import RegistroModal from './components/RegistroModal';
+import AdminModal from './components/AdminModal';
 import LoginModal from './components/LoginModal';
 import CartModal from './components/CartModal';
-// Importa los componentes que creaste en el paso anterior y el de esta vez
-
-
 
 function App() {
   const [productos, setProductos] = useState([]);
@@ -50,7 +49,6 @@ function App() {
     });
   };
 
-  // NUEVAS FUNCIONES PARA EL CARRITO
   const cambiarCantidad = (codigo, delta) => {
     setCarrito(prevCarrito => {
       return prevCarrito.map(p => {
@@ -59,7 +57,7 @@ function App() {
           return { ...p, cantidad: nuevaCantidad };
         }
         return p;
-      }).filter(p => p.cantidad > 0); // Si llega a 0, se elimina automáticamente
+      }).filter(p => p.cantidad > 0); 
     });
   };
 
@@ -93,14 +91,14 @@ function App() {
         <Contacto />
       </main>
 
-      {/* RENDERIZAR LOS MODALES AL FINAL */}
-      < CartModal
+      <CartModal
         carrito={carrito} 
         cambiarCantidad={cambiarCantidad} 
         eliminarDelCarrito={eliminarDelCarrito} 
       />
-      
       <LoginModal />
+      <RegistroModal />
+      <AdminModal />
 
       <footer className="bg-dark text-white text-center py-3 mt-5">
           <p className="mb-0">&copy; 2026 HuertoHogar. Todos los derechos reservados.</p>
